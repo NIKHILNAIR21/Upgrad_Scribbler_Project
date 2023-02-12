@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.logo-container {
+    text-decoration: none;
+}
+
+.logo {
+    font-family: 'Montez', cursive;
+    font-size: 35px;
+    color: #0000ff;
+    text-decoration: none;
+    margin: 10px 10px 0px 10px;
+}
+
+.logo-subheading {
+    font-family: 'Ubuntu Mono', cursive;
+    font-size: 15px;
+    margin-top: 0;
+    margin: 0 0 0px 10px;
+}
+
+.header-button {
+    width: 100px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    background: #0000ff;
+    color: #fff;
+    margin: 10px 10px 0px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    outline: nonel
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 25%;
+    font-family: 'Abel', sans-serif;
+    padding: 20px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.modal-heading {
+    font-size: 20px;
+    font-weight: 400;
+    color: #555;
+    width: 100%;
+}
+
+.close-btn {
+    color: #818181;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-horizontal-rule {
+    margin: 10px 0;
+}
+
+.modal-label {
+    letter-spacing: 0.5px;
+    font-family: 'Abel', sans-serif;
+    font-size: 15px;
+    display: block;
+}
+
+.modal-textbox {
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: none;
+    background: #f1f1f1;
+    display: block;
+}
+
+.modal-btn {
+    float: left;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.signup-message {
+    padding-top: 10px;
+    font-size: 12px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.signup-link {
+    color: #0000ff;
+    cursor: pointer;
+}

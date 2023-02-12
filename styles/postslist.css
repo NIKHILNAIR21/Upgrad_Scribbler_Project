@@ -1,0 +1,132 @@
+html,
+body {
+    background: #ffeedd;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.header-container {
+    width: 100%;
+}
+
+.all-posts-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.post {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    background: #fff;
+    box-shadow: 0 4px 10px 0 rgba(17, 4, 63, 0.2), 0 4px 20px 0 rgba(79, 19, 97, 0.19);
+    margin: 15px 0;
+    border-radius: 15px;
+}
+
+.post:hover {
+    box-shadow: 0 32px 64px 0 rgba(0, 0, 0, 0.2);
+}
+
+.post-username {
+    font-weight: bold;
+    color: #707070;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+.post-right {
+    height: 100%;
+    background-color: #E8E8E8;
+    color: #000000;
+    border-radius: 0 15px 15px 0;
+    padding: 0 20px;
+}
+
+.post-right-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px 0;
+}
+
+.delete-btn {
+    color: #818181;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.post-title {
+    font-family: 'Abel', sans-serif;
+    color: #818181;
+    font-size: 19px;
+}
+
+.post-desc {
+    height: 55px;
+    overflow: hidden;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.post-more {
+    float: right;
+    cursor: pointer;
+    color: #818181;
+    padding: 10px 0;
+}
+
+.delete-post-modal {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.delete-post-modal-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 25%;
+    font-family: 'Abel', sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+.delete-post-heading {
+    font-size: 18px;
+    color: #000;
+    padding-bottom: 20px;
+}
+
+.delete-post-btns-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.confirm-delete-btn {
+    width: 80px;
+    align-self: right;
+}
+
+.cancel-delete-btn {
+    width: 80px;
+    align-self: center;
+    background: #c22;
+}

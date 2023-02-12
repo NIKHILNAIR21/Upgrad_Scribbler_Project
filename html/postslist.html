@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montez|Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link href='../styles/common.css' rel='stylesheet' type='text/css'>
+    <link href='../styles/postslist.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="header-container">
+        <!-- header starts here -->
+        <div class="header">
+            <a href="../index.html" class="logo-container">
+                <div>
+                    <p class="logo">ScriBBler</p>
+                    <p class="logo-subheading">Explore, Imagine, Create</p>
+                </div>
+            </a>
+
+            <div>
+                <input class="header-button" type="button" onclick="openSignupModal()" value="Sign Up">
+                <input class="header-button" type="button" onclick="openSigninModal()" value="Sign In">
+            </div>
+        </div>
+        <!-- header ends here -->
+    </div>
+
+    <!-- signup modal starts here -->
+    <div id="signUpModal" class="modal">
+        <div class="modal-content">
+            <div class="flex-container">
+                <h1 class="modal-heading">Get Started</h1>
+                <span onclick="closeModal()" class="close-btn">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </span>
+            </div>
+            <hr class="modal-horizontal-rule">
+            <form class="modal-form">
+                <label for="name" class="modal-label">Name</label>
+                <input type="text" class="modal-textbox" placeholder="Enter your name" name="name" required>
+                <label for="username" class="modal-label">Username</label>
+                <input type="text" class="modal-textbox" placeholder="Enter your username" name="username" required>
+                <label for="password" class="modal-label">Password</label>
+                <input type="password" class="modal-textbox" placeholder="Enter your password" name="password" required>
+                <label for="confirmPassword" class="modal-label">Confirm Password</label>
+                <input type="password" class="modal-textbox" placeholder="Re-enter your password" name="confirmPassword" required>
+                <button type="submit" class="modal-btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <!-- signup modal ends here -->
+
+    <!-- signin modal starts here -->
+    <div id="signInModal" class="modal">
+        <div class="modal-content">
+            <div class="flex-container">
+                <h1 class="modal-heading">Welcome Back!</h1>
+                <span onclick="closeModal()" class="close-btn">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </span>
+            </div>
+            <hr class="modal-horizontal-rule">
+            <form class="modal-form">
+                <label for="username" class="modal-label">Username</label>
+                <input type="text" class="modal-textbox" placeholder="Enter your username" name="username" required>
+                <label for="password" class="modal-label">Password</label>
+                <input type="password" class="modal-textbox" placeholder="Enter your password" name="password" required>
+                <button type="submit" class="modal-btn">Sign Up</button>
+            </form>
+            <div class="signup-message">Not a member?
+                <span class="signup-link" onclick="displaySignupModal()">Sign Up</span>
+            </div>
+        </div>
+    </div>
+    <!-- signin modal ends here -->
+
+    <!-- list of all posts starts here -->
+    <div class="all-posts-container">
+
+        <!-- post 1 starts here -->
+        <div id="post-1" class="post">
+            <div class="post-left">
+                <p class="post-username">Srishti Gupta</p>
+            </div>
+
+            <div class="post-right">
+                <div class="post-right-header">
+                    <p class="post-title">‘let’ me be a ‘const’(ant), not a ‘var’(iable)!</p>
+                    <span onclick="viewDeletePostModal('post-1')" class="delete-btn">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <p class="post-desc">Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.</p>
+                <span onclick="viewFullPost()" class="post-more">
+                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                </span>
+            </div>
+        </div>
+        <!-- post 1 ends here -->
+
+        <!-- post 2 starts here -->
+        <div id="post-2" class="post">
+            <div class="post-left">
+                <p class="post-username">Colby Fayock</p>
+            </div>
+
+            <div class="post-right">
+                <div class="post-right-header">
+                    <p class="post-title">What is linting and how can it save you time?</p>
+                    <span onclick="viewDeletePostModal('post-2')" class="delete-btn">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <p class="post-desc">One of the biggest challenges in software development is time. It’s something we can’t easily get more of, but linting can help us make the most out of the time we have.</p>
+                <span onclick="viewFullPost()" class="post-more">
+                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                </span>
+            </div>
+        </div>
+        <!-- post 2 ends here -->
+
+        <!-- post 3 starts here -->
+        <div id="post-3" class="post">
+            <div class="post-left">
+                <p class="post-username">Yazeed Bzadough</p>
+            </div>
+
+            <div class="post-right">
+                <div class="post-right-header">
+                    <p class="post-title">How to Get More Views on Your Tech Blog</p>
+                    <span onclick="viewDeletePostModal('post-3')" class="delete-btn">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <p class="post-desc">If you're a developer with a Twitter account, you've already seen everyone and their cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very least, a recognizable name in the industry.</p>
+                <span onclick="viewFullPost()" class="post-more">
+                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                </span>
+            </div>
+        </div>
+        <!-- post 3 ends here -->
+
+        <!-- post 4 starts here -->
+        <div id="post-4" class="post">
+            <div class="post-left">
+                <p class="post-username">Cedd Burge</p>
+            </div>
+
+            <div class="post-right">
+                <div class="post-right-header">
+                    <p class="post-title">How to write easily describable code</p>
+                    <span onclick="viewDeletePostModal('post-4')" class="delete-btn">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <p class="post-desc">When code is not describable using words, most people have to do some mental mapping to turn it in to words. This wastes mental energy, and you run the risk of getting the mapping wrong. Different people will map to different words, which
+                    leads to confusion when discussing the code.</p>
+                <span onclick="viewFullPost()" class="post-more">
+                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                </span>
+            </div>
+        </div>
+        <!-- post 4 ends here -->
+
+        <!-- post 5 starts here -->
+        <div id="post-5" class="post">
+            <div class="post-left">
+                <p class="post-username">Srishti Gupta</p>
+            </div>
+
+            <div class="post-right">
+                <div class="post-right-header">
+                    <p class="post-title">Everything you should know about ‘module’ & ‘require’ in Node.js</p>
+                    <span onclick="viewDeletePostModal('post-5')" class="delete-btn">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <p class="post-desc">Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
+                    named xyz.
+                </p>
+                <span onclick="viewFullPost()" class="post-more">
+                    <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                </span>
+            </div>
+        </div>
+        <!-- post 5 ends here -->
+
+        <!-- delete post modal starts here -->
+        <div id="deletePostModal" class="delete-post-modal">
+            <div class="delete-post-modal-content">
+                <form class="modal-form">
+                    <p class="delete-post-heading">Are you sure you want to delete this post?</p>
+                    <div class="delete-post-btns-container">
+                        <button type="submit" class="modal-btn confirm-delete-btn" onclick="deletePost()">Yes</button>
+                        <button type=" button " class="modal-btn cancel-delete-btn " onclick="closeDeletePostModal() ">No</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- delete post modal ends here -->
+
+    </div>
+    <!-- list of all posts ends here -->
+
+    <script src="../scripts/postslist.js "></script>
+    <script src="../scripts/common.js "></script>
+</body>
+
+</html>

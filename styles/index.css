@@ -1,0 +1,89 @@
+body {
+    background: url('../images/background.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.header-container {
+    height: 100%;
+    width: 100%;
+}
+
+.post-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    width: 100%;
+    position: absolute;
+}
+
+.post-button {
+    font-size: 16px;
+    background: #CFB53B;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    cursor: pointer;
+    width: 125px;
+    margin: 0 10px;
+}
+
+.post-button:hover {
+    color: #fff;
+    background: #3366cc;
+}
+
+.new-post-modal-content {
+    width: 80%;
+}
+
+.new-post-modal-textarea {
+    height: 40vh;
+    font-family: Arial;
+}
+
+.new-post-modal-btn {
+    width: 120px;
+    align-self: center;
+}
+
+.new-post-body {
+    position: relative;
+    width: 70%;
+    margin: 1% auto auto auto;
+    text-align: left;
+    background-color: #fff;
+    font-family: 'Abel', sans-serif;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #fff;
+}
+
+.close-btn-new-post-dialog {
+    position: absolute;
+    right: 20px;
+    /* top: 10px; */
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;
+}
+
+.close-btn-new-post-dialog:hover,
+.close-btn-new-post-dialog:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+#newPostModal a {
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+#newPostModal a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}

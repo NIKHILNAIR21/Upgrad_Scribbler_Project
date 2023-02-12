@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montez|Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link href='styles/common.css' rel='stylesheet' type='text/css'>
+    <link href='styles/index.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="header-container">
+        <!-- header starts here -->
+        <div class="header">
+            <div class="logo-container">
+                <p class="logo">ScriBBler</p>
+                <p class="logo-subheading">Explore, Imagine, Create</p>
+            </div>
+
+            <div>
+                <input class="header-button" type="button" onclick="openSignupModal()" value="Sign Up">
+                <input class="header-button" type="button" onclick="openSigninModal()" value="Sign In">
+            </div>
+        </div>
+        <!-- header ends here -->
+
+        <!-- body of homepage starts here -->
+        <div class="post-buttons-container">
+            <input class="post-button" type="button" onclick="displayAllPosts()" value="All Posts" />
+            <input class="post-button" type="button" onclick="createPost()" value="Create Post">
+        </div>
+        <!-- body of homepage ends here -->
+    </div>
+
+    <!-- signup modal starts here -->
+    <div id="signUpModal" class="modal">
+        <div class="modal-content">
+            <div class="flex-container">
+                <h1 class="modal-heading">Get Started</h1>
+                <span onclick="closeModal()" class="close-btn">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </span>
+            </div>
+            <hr class="modal-horizontal-rule">
+            <form class="modal-form">
+                <label for="name" class="modal-label">Name</label>
+                <input type="text" class="modal-textbox" placeholder="Enter your name" name="name" required>
+                <label for="username" class="modal-label">Username</label>
+                <input type="text" class="modal-textbox" placeholder="Enter your username" name="username" required>
+                <label for="password" class="modal-label">Password</label>
+                <input type="password" class="modal-textbox" placeholder="Enter your password" name="password" required>
+                <label for="confirmPassword" class="modal-label">Confirm Password</label>
+                <input type="password" class="modal-textbox" placeholder="Re-enter your password" name="confirmPassword" required>
+                <button type="submit" class="modal-btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <!-- signup modal ends here -->
+
+    <!-- signin modal starts here -->
+    <div id="signInModal" class="modal">
+        <div class="modal-content">
+            <div class="flex-container">
+                <h1 class="modal-heading">Welcome Back!</h1>
+                <span onclick="closeModal()" class="close-btn">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </span>
+            </div>
+            <hr class="modal-horizontal-rule">
+            <form class="modal-form">
+                <label for="username" class="modal-label">Username</label>
+                <input type="text" class="modal-textbox" placeholder="Enter your username" name="username" required>
+                <label for="password" class="modal-label">Password</label>
+                <input type="password" class="modal-textbox" placeholder="Enter your password" name="password" required>
+                <button type="submit" class="modal-btn">Sign In</button>
+            </form>
+            <div class="signup-message">Not a member?
+                <span class="signup-link" onclick="displaySignupModal()">Sign Up</span>
+            </div>
+        </div>
+    </div>
+    <!-- signin modal ends here -->
+
+    <!-- new post modal starts here -->
+    <div id="newPostModal" class="modal">
+        <div class="modal-content new-post-modal-content">
+            <div class="flex-container">
+                <h1 class="modal-heading">Pen Your Post</h1>
+                <span onclick="closeNewPostDialog()" class="close-btn">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </span>
+            </div>
+            <hr class="modal-horizontal-rule">
+            <form class="modal-form">
+                <label for="postTitle" class="modal-label">Title</label>
+                <input type="text" class="modal-textbox" placeholder="Enter title of your post" name="postTitle" required>
+                <label for="postContent" class="modal-label">Contents</label>
+                <textarea class="modal-textbox new-post-modal-textarea" placeholder="Enter the contents of your post" name="postContent" required></textarea>
+                <button type="submit" class="modal-btn new-post-modal-btn">Create</button>
+            </form>
+        </div>
+    </div>
+    <!-- new post modal ends here -->
+
+    <script src="scripts/index.js"></script>
+    <script src="scripts/common.js"></script>
+</body>
+
+</html>

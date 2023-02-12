@@ -1,0 +1,112 @@
+.post-main-container {
+    padding: 30px 60px;
+}
+
+.post-title {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#authorEditBtnContainer {
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.post-author {
+    font-family: 'Ubuntu Mono', cursive;
+    font-size: 22px;
+}
+
+#editPostButton {
+    width: 80px;
+    padding: 10px;
+    cursor: pointer;
+    background: #ed2553;
+    color: #fff;
+    float: right;
+    box-shadow: 0 10px 20px -8px rgb(240, 75, 113);
+    outline: none;
+    border: none;
+}
+
+.fa-edit,
+.fa-save {
+    padding-left: 7px;
+}
+
+.fa-thumbs-up {
+    margin-right: 5px;
+}
+
+#postText {
+    font-size: 16px;
+    text-align: justify;
+}
+
+.like-post {
+    margin-top: 20px;
+}
+
+#likePostBtn {
+    width: 80px;
+    display: block;
+    background: #ed2553;
+    color: #ffffff;
+    box-shadow: 0 10px 20px -8px rgb(240, 75, 113);
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.like-post #likePostBtn:hover {
+    transform: translateY(-3px);
+}
+
+#likesCount {
+    color: #666;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+}
+
+.comment-form {
+    width: 100%;
+    margin: 25px 0;
+}
+
+#commentText {
+    width: 70%;
+}
+
+.add-comment-btn {
+    width: 100px;
+    background-color: #ed2553;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px;
+    box-shadow: 0 10px 20px -8px rgb(240, 75, 113);
+    outline: none;
+    border: none;
+    margin-top: 10px;
+}
+
+.allCommentsHeading {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#allCommentsBox {
+    background-color: #e2e4e6;
+    padding: 10px 0;
+    width: 70%;
+    display: none;
+}
